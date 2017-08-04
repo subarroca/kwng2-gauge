@@ -9,6 +9,6 @@ describe('ng-gauge App', function () {
 
   it('should display message saying gauge works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('gauge works!');
+    page.getParagraphText().then(msg => expect(msg).toEqual('gauge works!'));
   });
 });
