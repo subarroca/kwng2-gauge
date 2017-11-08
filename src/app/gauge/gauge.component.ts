@@ -2,33 +2,17 @@
  * @category   Component
  * @package    com.kiwity.gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
-**/
+ **/
 
+import { Component, Input, OnInit } from '@angular/core';
 
-
-
-// ANGULAR
-import { Component, OnInit, Input } from '@angular/core';
-
-
-
-
-// EXTERNAL
-
-
-
-// OWN
-import { GaugeSegment } from './shared/gauge-segment';
 import { GaugeLabel } from './shared/gauge-label';
-
-
-
-
+import { GaugeSegment } from './shared/gauge-segment';
 
 @Component({
   selector: 'ng-gauge',
   templateUrl: './gauge.component.html',
-  styleUrls: ['./gauge.component.scss']
+  styleUrls: ['./gauge.component.css']
 })
 export class GaugeComponent implements OnInit {
   @Input() bgRadius = 100;
@@ -71,5 +55,4 @@ export class GaugeComponent implements OnInit {
       }
     });
   }
-
 }

@@ -1,11 +1,25 @@
-/* tslint:disable:no-unused-variable */
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestBed, async } from '@angular/core/testing';
 import { GaugeComponent } from './gauge.component';
 
-describe('Component: Gauge', () => {
-  it('should create an instance', () => {
-    let component = new GaugeComponent();
+describe('GaugeComponent', () => {
+  let component: GaugeComponent;
+  let fixture: ComponentFixture<GaugeComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ GaugeComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(GaugeComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

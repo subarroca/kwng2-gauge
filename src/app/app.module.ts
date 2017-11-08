@@ -2,30 +2,13 @@
  * @category   Module
  * @package    com.kiwity.gauge.app
  * @author     Salvador Subarroca (subarroca@gmail.com)
-**/
+ **/
 
-
-
-
-// ANGULAR
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
-
-
-// EXTERNAL
-
-
-
-
-// OWN
 import { AppComponent } from './app.component';
-import { GaugeModule } from './gauge';
-
-
-
-
+import { GaugeModule } from './gauge/gauge.module';
 
 
 @NgModule({
@@ -39,4 +22,4 @@ import { GaugeModule } from './gauge';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
