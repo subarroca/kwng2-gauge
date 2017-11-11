@@ -6,7 +6,16 @@ import { CommonModule } from '@angular/common';
  * @package    com.kiwity.gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
  **/
-class GaugeComponent {
+var __decorate$1 = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+let GaugeComponent = class GaugeComponent {
     constructor() {
         this.bgRadius = 100;
         this.rounded = true;
@@ -15,25 +24,14 @@ class GaugeComponent {
         this.segmentsLoaded = false;
         this.isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
     }
-    /**
-     * @param {?} segments
-     * @return {?}
-     */
     set segments(segments) {
         this.segmentsLoaded = false;
         this.sortedSegments = this.sortSegments(segments);
         // wait a bit and start animation
         setTimeout(() => this.segmentsLoaded = true, 0);
     }
-    /**
-     * @return {?}
-     */
     ngOnInit() {
     }
-    /**
-     * @param {?} segments
-     * @return {?}
-     */
     sortSegments(segments) {
         return segments && segments.sort((a, b) => {
             if (this.reverse) {
@@ -44,11 +42,40 @@ class GaugeComponent {
             }
         });
     }
-}
-GaugeComponent.decorators = [
-    { type: Component, args: [{
-                selector: 'ng-gauge',
-                template: `
+};
+__decorate$1([
+    Input(),
+    __metadata("design:type", Object)
+], GaugeComponent.prototype, "bgRadius", void 0);
+__decorate$1([
+    Input(),
+    __metadata("design:type", String)
+], GaugeComponent.prototype, "bgColor", void 0);
+__decorate$1([
+    Input(),
+    __metadata("design:type", Object)
+], GaugeComponent.prototype, "rounded", void 0);
+__decorate$1([
+    Input(),
+    __metadata("design:type", Object)
+], GaugeComponent.prototype, "reverse", void 0);
+__decorate$1([
+    Input(),
+    __metadata("design:type", Object)
+], GaugeComponent.prototype, "animationSecs", void 0);
+__decorate$1([
+    Input(),
+    __metadata("design:type", Array)
+], GaugeComponent.prototype, "labels", void 0);
+__decorate$1([
+    Input(),
+    __metadata("design:type", Array),
+    __metadata("design:paramtypes", [Array])
+], GaugeComponent.prototype, "segments", null);
+GaugeComponent = __decorate$1([
+    Component({
+        selector: 'ng-gauge',
+        template: `
     <svg viewBox="0 0 200 200">
       <g
         class=kw-holder
@@ -93,7 +120,7 @@ GaugeComponent.decorators = [
       </g>
     </svg>
   `,
-                styles: [`
+        styles: [`
     .kw-mid,
     .kw-front {
       fill: transparent;
@@ -104,47 +131,42 @@ GaugeComponent.decorators = [
               transform: translate(100px, 100px) rotate(-90deg);
     }
   `]
-            },] },
-];
-/**
- * @nocollapse
- */
-GaugeComponent.ctorParameters = () => [];
-GaugeComponent.propDecorators = {
-    'bgRadius': [{ type: Input },],
-    'bgColor': [{ type: Input },],
-    'rounded': [{ type: Input },],
-    'reverse': [{ type: Input },],
-    'animationSecs': [{ type: Input },],
-    'labels': [{ type: Input },],
-    'segments': [{ type: Input },],
-};
+    }),
+    __metadata("design:paramtypes", [])
+], GaugeComponent);
 
 /**
  * @category   Module
  * @package    com.kiwity.gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
  **/
-class GaugeModule {
-}
-GaugeModule.decorators = [
-    { type: NgModule, args: [{
-                imports: [
-                    CommonModule
-                ],
-                declarations: [GaugeComponent],
-                exports: [GaugeComponent]
-            },] },
-];
-/**
- * @nocollapse
- */
-GaugeModule.ctorParameters = () => [];
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let GaugeModule = class GaugeModule {
+};
+GaugeModule = __decorate([
+    NgModule({
+        imports: [
+            CommonModule
+        ],
+        declarations: [GaugeComponent],
+        exports: [GaugeComponent]
+    })
+], GaugeModule);
 
+/**
+ * @category   Model
+ * @package    com.kiwity.gauge.gauge
+ * @author     Salvador Subarroca (subarroca@gmail.com)
+**/
+// ANGULAR
+// EXTERNAL
+// OWN
 class GaugeSegment {
-    /**
-     * @param {?=} options
-     */
     constructor(options = {}) {
         this.radius = options.radius || 100;
         this.goal = options.goal || 100;
@@ -153,32 +175,26 @@ class GaugeSegment {
         this.bgColor = options.bgColor || 'transparent';
         this.borderWidth = options.borderWidth || 100;
     }
-    /**
-     * @return {?}
-     */
     get computedRadius() {
         return this.radius - this.borderWidth / 2;
     }
-    /**
-     * @this {?}
-     * @return {?}
-     */
     get strokeProgress() {
         return `${2 * Math.PI * this.computedRadius * this.value / this.goal} ${2 * Math.PI * this.computedRadius}`;
     }
-    /**
-     * @this {?}
-     * @return {?}
-     */
     get strokeEmptyProgress() {
         return `0 ${2 * Math.PI * this.computedRadius}`;
     }
 }
 
+/**
+ * @category   Model
+ * @package    com.kiwity.gauge.gauge
+ * @author     Salvador Subarroca (subarroca@gmail.com)
+**/
+// ANGULAR
+// EXTERNAL
+// OWN
 class GaugeLabel {
-    /**
-     * @param {?=} options
-     */
     constructor(options = {}) {
         this.color = options.color;
         this.text = options.text;
