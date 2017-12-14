@@ -9,20 +9,6 @@
  * @package    com.kiwity.gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
  **/
-var __decorate$1 = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-        r = Reflect.decorate(decorators, target, key, desc);
-    else
-        for (var i = decorators.length - 1; i >= 0; i--)
-            if (d = decorators[i])
-                r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-        return Reflect.metadata(k, v);
-};
 var GaugeComponent = /** @class */ (function () {
     function GaugeComponent() {
         this.bgRadius = 100;
@@ -33,6 +19,10 @@ var GaugeComponent = /** @class */ (function () {
         this.isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
     }
     Object.defineProperty(GaugeComponent.prototype, "segments", {
+        /**
+         * @param {?} segments
+         * @return {?}
+         */
         set: function (segments) {
             var _this = this;
             this.segmentsLoaded = false;
@@ -43,8 +33,15 @@ var GaugeComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    /**
+     * @return {?}
+     */
     GaugeComponent.prototype.ngOnInit = function () {
     };
+    /**
+     * @param {?} segments
+     * @return {?}
+     */
     GaugeComponent.prototype.sortSegments = function (segments) {
         var _this = this;
         return segments && segments.sort(function (a, b) {
@@ -58,81 +55,53 @@ var GaugeComponent = /** @class */ (function () {
     };
     return GaugeComponent;
 }());
-__decorate$1([
-    core.Input(),
-    __metadata("design:type", Object)
-], GaugeComponent.prototype, "bgRadius", void 0);
-__decorate$1([
-    core.Input(),
-    __metadata("design:type", String)
-], GaugeComponent.prototype, "bgColor", void 0);
-__decorate$1([
-    core.Input(),
-    __metadata("design:type", Object)
-], GaugeComponent.prototype, "rounded", void 0);
-__decorate$1([
-    core.Input(),
-    __metadata("design:type", Object)
-], GaugeComponent.prototype, "reverse", void 0);
-__decorate$1([
-    core.Input(),
-    __metadata("design:type", Object)
-], GaugeComponent.prototype, "animationSecs", void 0);
-__decorate$1([
-    core.Input(),
-    __metadata("design:type", Array)
-], GaugeComponent.prototype, "labels", void 0);
-__decorate$1([
-    core.Input(),
-    __metadata("design:type", Array),
-    __metadata("design:paramtypes", [Array])
-], GaugeComponent.prototype, "segments", null);
-GaugeComponent = __decorate$1([
-    core.Component({
-        selector: 'ng-gauge',
-        template: "\n    <svg viewBox=\"0 0 200 200\">\n      <g\n        class=kw-holder\n        [attr.transform]=\"isIE11 ? 'translate(100 100) rotate(-90)' : ''\">\n        <circle\n          class=kw-back\n          [attr.r]=\"bgRadius\"\n          [style.fill]=bgColor/>\n\n          <g\n            *ngFor=\"let segment of sortedSegments\">\n            <circle\n              class=kw-mid\n              [style.stroke]=segment.bgColor\n              [style.strokeWidth]=segment.borderWidth\n              [attr.r]=segment.computedRadius/>\n\n              <circle\n                class=kw-front\n\n                [style.transition]=\"'stroke-dasharray ' + animationSecs + 's'\"\n                [style.stroke]=segment.color\n                [style.strokeWidth]=segment.borderWidth\n                [style.strokeDasharray]=\"segmentsLoaded ? segment.strokeProgress : segment.strokeEmptyProgress\"\n                [style.strokeLinecap]=\"rounded ? 'round' : ''\"\n                [attr.r]=segment.computedRadius/>\n          </g>\n      </g>\n\n      <g\n        transform=\"translate(100, 100)\">\n        <text\n          class=kw-label\n          *ngFor=\"let label of labels\"\n          [attr.x]=label.x\n          [attr.y]=label.y\n          [style.fill]=label.color\n          [style.fontSize]=label.fontSize\n          text-anchor=middle>\n          {{label.text}}\n        </text>\n      </g>\n    </svg>\n  ",
-        styles: ["\n    .kw-mid,\n    .kw-front {\n      fill: transparent;\n    }\n\n    .kw-holder {\n      -webkit-transform: translate(100px, 100px) rotate(-90deg);\n              transform: translate(100px, 100px) rotate(-90deg);\n    }\n  "]
-    }),
-    __metadata("design:paramtypes", [])
-], GaugeComponent);
+GaugeComponent.decorators = [
+    { type: core.Component, args: [{
+                selector: 'ng-gauge',
+                template: "\n    <svg viewBox=\"0 0 200 200\">\n      <g\n        class=kw-holder\n        [attr.transform]=\"isIE11 ? 'translate(100 100) rotate(-90)' : ''\">\n        <circle\n          class=kw-back\n          [attr.r]=\"bgRadius\"\n          [style.fill]=bgColor/>\n\n          <g\n            *ngFor=\"let segment of sortedSegments\">\n            <circle\n              class=kw-mid\n              [style.stroke]=segment.bgColor\n              [style.strokeWidth]=segment.borderWidth\n              [attr.r]=segment.computedRadius/>\n\n              <circle\n                class=kw-front\n\n                [style.transition]=\"'stroke-dasharray ' + animationSecs + 's'\"\n                [style.stroke]=segment.color\n                [style.strokeWidth]=segment.borderWidth\n                [style.strokeDasharray]=\"segmentsLoaded ? segment.strokeProgress : segment.strokeEmptyProgress\"\n                [style.strokeLinecap]=\"rounded ? 'round' : ''\"\n                [attr.r]=segment.computedRadius/>\n          </g>\n      </g>\n\n      <g\n        transform=\"translate(100, 100)\">\n        <text\n          class=kw-label\n          *ngFor=\"let label of labels\"\n          [attr.x]=label.x\n          [attr.y]=label.y\n          [style.fill]=label.color\n          [style.fontSize]=label.fontSize\n          text-anchor=middle>\n          {{label.text}}\n        </text>\n      </g>\n    </svg>\n  ",
+                styles: ["\n    .kw-mid,\n    .kw-front {\n      fill: transparent;\n    }\n\n    .kw-holder {\n      -webkit-transform: translate(100px, 100px) rotate(-90deg);\n              transform: translate(100px, 100px) rotate(-90deg);\n    }\n  "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+GaugeComponent.ctorParameters = function () { return []; };
+GaugeComponent.propDecorators = {
+    'bgRadius': [{ type: core.Input },],
+    'bgColor': [{ type: core.Input },],
+    'rounded': [{ type: core.Input },],
+    'reverse': [{ type: core.Input },],
+    'animationSecs': [{ type: core.Input },],
+    'labels': [{ type: core.Input },],
+    'segments': [{ type: core.Input },],
+};
 /**
  * @category   Module
  * @package    com.kiwity.gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
  **/
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-        r = Reflect.decorate(decorators, target, key, desc);
-    else
-        for (var i = decorators.length - 1; i >= 0; i--)
-            if (d = decorators[i])
-                r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-exports.GaugeModule = /** @class */ (function () {
+var GaugeModule = /** @class */ (function () {
     function GaugeModule() {
     }
     return GaugeModule;
 }());
-exports.GaugeModule = __decorate([
-    core.NgModule({
-        imports: [
-            common.CommonModule
-        ],
-        declarations: [GaugeComponent],
-        exports: [GaugeComponent]
-    })
-], exports.GaugeModule);
+GaugeModule.decorators = [
+    { type: core.NgModule, args: [{
+                imports: [
+                    common.CommonModule
+                ],
+                declarations: [GaugeComponent],
+                exports: [GaugeComponent]
+            },] },
+];
 /**
- * @category   Model
- * @package    com.kiwity.gauge.gauge
- * @author     Salvador Subarroca (subarroca@gmail.com)
-**/
-// ANGULAR
-// EXTERNAL
-// OWN
+ * @nocollapse
+ */
+GaugeModule.ctorParameters = function () { return []; };
 var GaugeSegment = /** @class */ (function () {
+    /**
+     * @param {?=} options
+     */
     function GaugeSegment(options) {
         if (options === void 0) { options = {}; }
         this.radius = options.radius || 100;
@@ -143,6 +112,9 @@ var GaugeSegment = /** @class */ (function () {
         this.borderWidth = options.borderWidth || 100;
     }
     Object.defineProperty(GaugeSegment.prototype, "computedRadius", {
+        /**
+         * @return {?}
+         */
         get: function () {
             return this.radius - this.borderWidth / 2;
         },
@@ -150,6 +122,10 @@ var GaugeSegment = /** @class */ (function () {
         configurable: true
     });
     Object.defineProperty(GaugeSegment.prototype, "strokeProgress", {
+        /**
+         * @this {?}
+         * @return {?}
+         */
         get: function () {
             return 2 * Math.PI * this.computedRadius * this.value / this.goal + " " + 2 * Math.PI * this.computedRadius;
         },
@@ -157,6 +133,10 @@ var GaugeSegment = /** @class */ (function () {
         configurable: true
     });
     Object.defineProperty(GaugeSegment.prototype, "strokeEmptyProgress", {
+        /**
+         * @this {?}
+         * @return {?}
+         */
         get: function () {
             return "0 " + 2 * Math.PI * this.computedRadius;
         },
@@ -165,15 +145,10 @@ var GaugeSegment = /** @class */ (function () {
     });
     return GaugeSegment;
 }());
-/**
- * @category   Model
- * @package    com.kiwity.gauge.gauge
- * @author     Salvador Subarroca (subarroca@gmail.com)
-**/
-// ANGULAR
-// EXTERNAL
-// OWN
 var GaugeLabel = /** @class */ (function () {
+    /**
+     * @param {?=} options
+     */
     function GaugeLabel(options) {
         if (options === void 0) { options = {}; }
         this.color = options.color;
@@ -187,6 +162,7 @@ var GaugeLabel = /** @class */ (function () {
 
 exports.GaugeSegment = GaugeSegment;
 exports.GaugeLabel = GaugeLabel;
+exports.GaugeModule = GaugeModule;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
