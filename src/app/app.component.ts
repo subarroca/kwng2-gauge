@@ -6,8 +6,8 @@
 
 import { Component } from '@angular/core';
 
-import { GaugeSegment } from './gauge/shared/gauge-segment';
-import { GaugeLabel } from './gauge/shared/gauge-label';
+import { GaugeSegment } from '../../gauge/shared/gauge-segment';
+import { GaugeLabel } from '../../gauge/shared/gauge-label';
 
 @Component({
   selector: 'ng-root',

@@ -8,7 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { GaugeModule } from './gauge/gauge.module';
+import { GaugeModule } from '../../gauge/gauge.module';
 
 
 @NgModule({
