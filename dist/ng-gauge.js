@@ -141,6 +141,19 @@ GaugeModule.decorators = [
  */
 GaugeModule.ctorParameters = () => [];
 
+class GaugeLabel {
+    /**
+     * @param {?=} options
+     */
+    constructor(options = {}) {
+        this.color = options.color;
+        this.text = options.text;
+        this.x = options.x || 0;
+        this.y = options.y || 0;
+        this.fontSize = options.fontSize || '1em';
+    }
+}
+
 class GaugeSegment {
     /**
      * @param {?=} options
@@ -175,22 +188,9 @@ class GaugeSegment {
     }
 }
 
-class GaugeLabel {
-    /**
-     * @param {?=} options
-     */
-    constructor(options = {}) {
-        this.color = options.color;
-        this.text = options.text;
-        this.x = options.x || 0;
-        this.y = options.y || 0;
-        this.fontSize = options.fontSize || '1em';
-    }
-}
-
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { GaugeSegment, GaugeLabel, GaugeModule };
+export { GaugeModule, GaugeLabel, GaugeSegment, GaugeComponent as ɵa };
 //# sourceMappingURL=ng-gauge.js.map

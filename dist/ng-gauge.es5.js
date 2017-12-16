@@ -94,6 +94,20 @@ GaugeModule.decorators = [
  * @nocollapse
  */
 GaugeModule.ctorParameters = function () { return []; };
+var GaugeLabel = /** @class */ (function () {
+    /**
+     * @param {?=} options
+     */
+    function GaugeLabel(options) {
+        if (options === void 0) { options = {}; }
+        this.color = options.color;
+        this.text = options.text;
+        this.x = options.x || 0;
+        this.y = options.y || 0;
+        this.fontSize = options.fontSize || '1em';
+    }
+    return GaugeLabel;
+}());
 var GaugeSegment = /** @class */ (function () {
     /**
      * @param {?=} options
@@ -141,22 +155,8 @@ var GaugeSegment = /** @class */ (function () {
     });
     return GaugeSegment;
 }());
-var GaugeLabel = /** @class */ (function () {
-    /**
-     * @param {?=} options
-     */
-    function GaugeLabel(options) {
-        if (options === void 0) { options = {}; }
-        this.color = options.color;
-        this.text = options.text;
-        this.x = options.x || 0;
-        this.y = options.y || 0;
-        this.fontSize = options.fontSize || '1em';
-    }
-    return GaugeLabel;
-}());
 /**
  * Generated bundle index. Do not edit.
  */
-export { GaugeSegment, GaugeLabel, GaugeModule };
+export { GaugeModule, GaugeLabel, GaugeSegment, GaugeComponent as ɵa };
 //# sourceMappingURL=ng-gauge.es5.js.map
