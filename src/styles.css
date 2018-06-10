@@ -1,11 +1,1 @@
-body {
-  background: #2d2d53;
-  color: white;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  font: 1em sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* You can add global styles to this file, and also import other style files */
