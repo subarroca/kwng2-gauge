@@ -2,33 +2,17 @@
  * @category   Component
  * @package    com.kiwity.gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
-**/
+ **/
 
+import { Component, Input, OnInit } from '@angular/core';
 
-
-
-// ANGULAR
-import { Component, OnInit, Input } from '@angular/core';
-
-
-
-
-// EXTERNAL
-
-
-
-// OWN
-import { GaugeSegment } from './shared/gauge-segment';
 import { GaugeLabel } from './shared/gauge-label';
-
-
-
-
+import { GaugeSegment } from './shared/gauge-segment';
 
 @Component({
   selector: 'ng-gauge',
   templateUrl: './gauge.component.html',
-  styleUrls: ['./gauge.component.scss']
+  styleUrls: ['./gauge.component.css']
 })
 export class GaugeComponent implements OnInit {
   @Input() bgRadius = 100;
@@ -38,7 +22,6 @@ export class GaugeComponent implements OnInit {
   @Input() animationSecs = 0.5;
 
   @Input() labels: GaugeLabel[];
-
 
   @Input()
   set segments(segments: GaugeSegment[]) {
@@ -50,11 +33,11 @@ export class GaugeComponent implements OnInit {
       () => this.segmentsLoaded = true,
       0);
   }
+
   sortedSegments: GaugeSegment[];
   segmentsLoaded = false;
 
   isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
-
 
 
   constructor() { }
@@ -64,12 +47,9 @@ export class GaugeComponent implements OnInit {
 
   sortSegments(segments: GaugeSegment[]) {
     return segments && segments.sort((a: GaugeSegment, b: GaugeSegment) => {
-      if (this.reverse) {
+      if (this.reverse)
         return (a.value / a.goal > b.value / b.goal) ? 1 : -1;
-      } else {
-        return (a.value / a.goal > b.value / b.goal) ? -1 : 1;
-      }
+      return (a.value / a.goal > b.value / b.goal) ? -1 : 1;
     });
   }
-
 }

@@ -2,43 +2,20 @@
  * @category   Module
  * @package    com.kiwity.gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
-**/
+ **/
 
-
-
-
-// ANGULAR
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-
-
-
-// EXTERNAL
-
-
-
-
-// OWN
 import { GaugeComponent } from './gauge.component';
 
 
-
-
-
 @NgModule({
-  declarations: [
-    GaugeComponent
-  ],
   imports: [
     CommonModule
   ],
-  providers: [],
-  bootstrap: [
-    GaugeComponent
-  ],
-  exports: [
-    GaugeComponent
-  ]
+  bootstrap: [GaugeComponent],
+  declarations: [GaugeComponent],
+  exports: [GaugeComponent]
 })
-export class GaugeModule { }
+export class GaugeModule {}
