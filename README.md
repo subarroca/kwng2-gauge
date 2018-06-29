@@ -18,7 +18,7 @@ import { GaugeModule } from 'ng-gauge';
 And the models where you need them
 ```typescript
 import { GaugeSegment, GaugeLabel } from 'ng-gauge';
-
+```
 
 
 ## Usage:
