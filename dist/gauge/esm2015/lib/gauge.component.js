@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * @category   Component
@@ -105,7 +105,7 @@ GaugeComponent.propDecorators = {
     labels: [{ type: Input }],
     segments: [{ type: Input }]
 };
-function GaugeComponent_tsickle_Closure_declarations() {
+if (false) {
     /** @type {?} */
     GaugeComponent.prototype.bgRadius;
     /** @type {?} */

@@ -6,7 +6,7 @@
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes} checked by tsc
+     * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
      */
     /**
      * @category   Model
@@ -66,7 +66,7 @@
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes} checked by tsc
+     * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
      */
     /**
      * @category   Model
@@ -96,7 +96,7 @@
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes} checked by tsc
+     * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
      */
     var GaugeComponent = (function () {
         function GaugeComponent() {
@@ -168,7 +168,7 @@
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes} checked by tsc
+     * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
      */
     var GaugeModule = (function () {
         function GaugeModule() {
@@ -188,12 +188,12 @@
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes} checked by tsc
+     * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
      */
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes} checked by tsc
+     * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
      */
 
     exports.GaugeSegment = GaugeSegment;

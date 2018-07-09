@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * @category   Model
@@ -22,7 +22,7 @@ export class GaugeLabel {
         this.fontSize = options.fontSize || '1em';
     }
 }
-function GaugeLabel_tsickle_Closure_declarations() {
+if (false) {
     /** @type {?} */
     GaugeLabel.prototype.color;
     /** @type {?} */

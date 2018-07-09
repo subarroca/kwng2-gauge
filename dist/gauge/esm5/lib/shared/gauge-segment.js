@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * @category   Model
@@ -62,7 +62,7 @@ GaugeSegment = /** @class */ (function () {
 // EXTERNAL
 // OWN
 export { GaugeSegment };
-function GaugeSegment_tsickle_Closure_declarations() {
+if (false) {
     /** @type {?} */
     GaugeSegment.prototype.radius;
     /** @type {?} */
