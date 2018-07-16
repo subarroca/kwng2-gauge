@@ -6,16 +6,21 @@ As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 ## Installing
 ng-gauge is available via npm
 ```bash
-npm install ng-gauge -S
+npm install gauge -S
+```
+
+Or to use this git version:
+```bash
+npm install glaucoma-australia/gauge -S
 ```
 
 Import GaugeModule in your module
 ```typescript
-import { GaugeModule } from 'ng-gauge/dist';
+import { GaugeModule } from 'gauge/dist';
 ```
 And the models where you need them
 ```typescript
-import { GaugeSegment, GaugeLabel } from 'ng-gauge/dist';
+import { GaugeSegment, GaugeLabel } from 'gauge/dist';
 ````
 
 
