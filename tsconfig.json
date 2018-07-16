@@ -17,11 +17,11 @@
       "dom"
     ],
     "paths": {
-      "gauge": [
-        "dist/gauge"
+      "gauge-chart": [
+        "dist/gauge-chart"
       ],
-      "gauge/*": [
-        "dist/gauge/*"
+      "gauge-chart/*": [
+        "dist/gauge-chart/*"
       ]
     }
   }

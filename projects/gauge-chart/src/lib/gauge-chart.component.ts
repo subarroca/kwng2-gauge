@@ -1,20 +1,14 @@
-/**
- * @category   Component
- * @package    com.kiwity.gauge.gauge
- * @author     Salvador Subarroca (subarroca@gmail.com)
- **/
-
 import { Component, Input, OnInit } from '@angular/core';
 
 import { GaugeLabel } from './shared/gauge-label';
 import { GaugeSegment } from './shared/gauge-segment';
 
 @Component({
-  selector: 'ng-gauge',
-  templateUrl: './gauge.component.html',
-  styleUrls: ['./gauge.component.css']
+  selector: 'ng-gauge-chart',
+  templateUrl: './gauge-chart.component.html',
+  styleUrls: ['./gauge-chart.component.css']
 })
-export class GaugeComponent implements OnInit {
+export class GaugeChartComponent implements OnInit {
   @Input() bgRadius = 100;
   @Input() bgColor: string;
   @Input() rounded = true;

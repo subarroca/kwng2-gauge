@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { GaugeSegment } from '../../projects/gauge/src/lib/shared/gauge-segment';
-import { GaugeLabel } from '../../projects/gauge/src/lib/shared/gauge-label';
+
+import { GaugeSegment } from '../../projects/gauge-chart/src/lib/shared/gauge-segment';
+import { GaugeLabel } from '../../projects/gauge-chart/src/lib/shared/gauge-label';
 
 @Component({
   selector: 'app-root',

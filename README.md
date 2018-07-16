@@ -6,7 +6,7 @@ As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 ## Installing
 ng-gauge is available via npm
 ```bash
-npm install gauge -S
+npm install ng-gauge -S
 ```
 
 Or to use this git version:
@@ -16,17 +16,17 @@ npm install glaucoma-australia/gauge -S
 
 Import GaugeModule in your module
 ```typescript
-import { GaugeModule } from 'gauge/dist';
+import { GaugeModule } from 'gauge-chart/dist';
 ```
 And the models where you need them
 ```typescript
-import { GaugeSegment, GaugeLabel } from 'gauge/dist';
+import { GaugeSegment, GaugeLabel } from 'gauge-chart/dist';
 ````
 
 
 ## Usage:
 ```html
-<ng-gauge></ng-gauge>
+<ng-gauge-chart></ng-gauge-chart>
 ```
 Set a width and height for the gauge and it will scale accordingly.
 

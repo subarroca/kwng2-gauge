@@ -1,16 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { GaugeModule } from '../../projects/gauge/src/lib/gauge.module';
 import { AppComponent } from './app.component';
-
+import { GaugeChartModule } from '../../projects/gauge-chart/src/lib/gauge-chart.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, GaugeModule
+    BrowserModule, GaugeChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
