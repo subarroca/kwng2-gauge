@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * @category   Model
@@ -29,7 +29,7 @@ GaugeLabel = /** @class */ (function () {
 // EXTERNAL
 // OWN
 export { GaugeLabel };
-function GaugeLabel_tsickle_Closure_declarations() {
+if (false) {
     /** @type {?} */
     GaugeLabel.prototype.color;
     /** @type {?} */

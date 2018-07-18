@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * @category   Model
@@ -43,7 +43,7 @@ export class GaugeSegment {
         return `0 ${2 * Math.PI * this.computedRadius}`;
     }
 }
-function GaugeSegment_tsickle_Closure_declarations() {
+if (false) {
     /** @type {?} */
     GaugeSegment.prototype.radius;
     /** @type {?} */

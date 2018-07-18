@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 import { Component, Input } from '@angular/core';
 var GaugeChartComponent = /** @class */ (function () {
@@ -72,7 +72,7 @@ var GaugeChartComponent = /** @class */ (function () {
     return GaugeChartComponent;
 }());
 export { GaugeChartComponent };
-function GaugeChartComponent_tsickle_Closure_declarations() {
+if (false) {
     /** @type {?} */
     GaugeChartComponent.prototype.bgRadius;
     /** @type {?} */
