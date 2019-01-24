@@ -1,34 +1,12 @@
-/**
- * @category   Component
- * @package    com.kiwity.gauge.app
- * @author     Salvador Subarroca (subarroca@gmail.com)
-**/
-
-
-
-
-// ANGULAR
 import { Component } from '@angular/core';
 
-
-
-
-// EXTERNAL
-
-
-
-
-// OWN
-import { GaugeSegment, GaugeLabel } from './gauge';
-
-
-
-
+import { GaugeSegment } from '../../projects/gauge-chart/src/lib/shared/gauge-segment';
+import { GaugeLabel } from '../../projects/gauge-chart/src/lib/shared/gauge-label';
 
 @Component({
-  selector: 'ng-root',
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   colors = {
