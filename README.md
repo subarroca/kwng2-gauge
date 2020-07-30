@@ -1,17 +1,14 @@
-# ng-gauge
+ng-gauge
+========
+
 Flexible gauge graph made with SVG and Angular 6 that can be used as pie chart too.
 
 As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 
 ## Installing
-ng-gauge is available via npm
+To use this git version:
 ```bash
-npm install ng-gauge -S
-```
-
-Or to use this git version:
-```bash
-npm install glaucoma-australia/gauge -S
+npm install glaucoma/gauge -S
 ```
 
 Import GaugeModule in your module
@@ -65,7 +62,7 @@ Example code can be checked in `src/app/app.html`
 
 ---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
 
 ## Development server
 

@@ -4,7 +4,7 @@ import { GaugeLabel } from './shared/gauge-label';
 import { GaugeSegment } from './shared/gauge-segment';
 
 @Component({
-  selector: 'ng-gauge-chart',
+  selector: 'lib-gauge-chart',
   templateUrl: './gauge-chart.component.html',
   styleUrls: ['./gauge-chart.component.css']
 })
@@ -36,13 +36,14 @@ export class GaugeChartComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
-  sortSegments(segments: GaugeSegment[]) {
+  sortSegments(segments: GaugeSegment[]): GaugeSegment[] {
     return segments && segments.sort((a: GaugeSegment, b: GaugeSegment) => {
-      if (this.reverse)
+      if (this.reverse) {
         return (a.value / a.goal > b.value / b.goal) ? 1 : -1;
+      }
       return (a.value / a.goal > b.value / b.goal) ? -1 : 1;
     });
   }
