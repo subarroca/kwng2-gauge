@@ -50,15 +50,15 @@ export class GaugeSegment {
 
 
 
-  get computedRadius() {
+  get computedRadius(): number {
     return this.radius - this.borderWidth / 2;
   }
 
-  get strokeProgress(this: GaugeSegment) {
+  get strokeProgress(): string {
     return `${2 * Math.PI * this.computedRadius * this.value / this.goal} ${2 * Math.PI * this.computedRadius}`;
   }
 
-  get strokeEmptyProgress(this: GaugeSegment) {
+  get strokeEmptyProgress(): string {
     return `0 ${2 * Math.PI * this.computedRadius}`;
   }
 }
